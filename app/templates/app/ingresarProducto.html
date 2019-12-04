@@ -1,0 +1,44 @@
+{% extends 'app/baseAgregar.html' %}
+
+{% block content %}
+{% load staticfiles %}
+
+
+<link href="{% static 'css/form.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/icomoon/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/menu.css' %}" rel="stylesheet">
+<h3 class="user">Bienvenido </h3>
+<h3 class="user">{{user.username}}</h3>
+<body>
+    <h1 class="f">Ingresar Producto</h1>
+       
+    <div id="registro" class="container">
+        <form  role="form" enctype="multipart/form-data" action="" method="POST" id="upload-image-form">
+
+            {% csrf_token %}
+            <!-- {{ form}} -->
+
+            <div class="form-group">
+                <label for="id_nombre">Nombre:</label><input type="text" name="nombre" maxlength="50" required=""
+                    id="id_nombre" class="form-control" placeholder="Ingrese Nombre Producto">
+            </div>
+            <div class="form-group">
+                <label for="id_descripcion">Descripción:</label><input type="text" name="descripcion" maxlength="50"
+                    required="" id="id_descripcion" class="form-control" placeholder="Ingrese Descripción">
+            </div>
+            <div class="form-group">
+                <label for="id_clasificasion">Clasificación:</label><input type="text" name="clasificacion"
+                    maxlength="50" required="" id="id_clasificasion" class="form-control" placeholder="Ingrese Nombre">
+            </div>
+            <div class="form-group">
+                <label for="id_precio">Precio:</label><input type="number" name="precio" maxlength="50" required=""
+                    id="id_precio" class="form-control" placeholder="Ingrese Precio">
+            </div>
+
+            
+            <button type="submit">GRABAR</button>
+        </form>
+    </div>
+</body>
+{% endblock content %}

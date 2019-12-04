@@ -1,0 +1,110 @@
+
+{% extends 'app/base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+
+<link  href="{% static 'css/estilos.css' %}" rel="stylesheet">
+<link  href="{% static 'css/form.css' %}" rel="stylesheet">
+<link  href="{% static 'css/icomoon/style.css' %}" rel="stylesheet">
+<link  href="{% static 'css/carrusel.css' %}" rel="stylesheet">
+<link  href="{% static 'css/menu.css' %}" rel="stylesheet">
+<h3 class="user">Bienvenido </h3>
+<h3 class="user">{{user.username}}</h3>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+   
+ 
+
+<h1 class="row justify-content-center">NUEVOS LANZAMIENTOS</h1>
+
+<div id="capa1">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+
+                <div class="carousel-item active">
+
+                    <a href="http://localhost:8000/blairWitch"><img class="row justify-content-center"src="{% static 'img/BlairWitch2019PCportadaok.png' %}" id="img1" alt="Blair-Witch"></a>
+
+                </div>
+                <div class="carousel-item">
+
+                    <a href="http://localhost:8000/finalFantasy"><img class="row justify-content-center"
+                            src="{% static 'img/Final-Fantasy-VIII-Remastered-2019-PC-portadaok.png' %}" id="img2"
+                            alt="Final-Fantasy"></a>
+                </div>
+                <div class="carousel-item">
+
+                    <a href="http://localhost:8000/nba"><img class="row justify-content-center" src="{% static 'img/NBA-2K20-PC-portadaok.png' %}" id="img3"
+                            alt="NBA"></a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="tituloTest">
+        <h1 class="h1titulo">Testimonio de Clientes</h1>
+    </div>
+
+    <div class="testimonio1">
+        <div class="contenedorTest1">
+            <img class="imgTesti1" src="{% static 'img/dicaprio.png' %}" alt="">
+            <h3>Leonardo DiCaprio</h3>
+            <p class="pTesti1">Me encanta la variedad de juegos que tiene, los precios son muy accesibles y además me
+                parece un diseño muy ecologico.</p>
+        </div>
+    </div>
+
+
+
+    <div class="testimonio2">
+        <div class="contenedorTest2">
+            <img class="imgTesti2" src="{% static 'img/trump.png' %}" alt="">
+            <h3>Donald Trump</h3>
+            <p class="pTesti2">Me parece una pagina muy buena, apoyo sobre todo los juegos violentos. Lo unico malo su
+                diseño tan tercermundista.</p>
+        </div>
+    </div>
+
+    <div class="testimonio3">
+        <div class="contenedorTest3">
+            <img class="imgTesti3" src="{% static 'img/viuda.png' %}" alt="">
+            <h3>Scarlett Johansson</h3>
+            <p class="pTesti3">Me gusta la rapidez con que encuentro los juegos que busco y me encanta gastar mi dinero
+                en cosas poco importantes.</p>
+        </div>
+    </div>
+
+    <div class="testimonio4">
+        <div class="contenedorTest4">
+            <img class="imgTesti4" src="{% static 'img/yhyy.png' %}" alt="">
+            <h3>Mister Bean</h3>
+            <p class="pTesti4">Siempre descargo juegos en esta pagina, para poder jugar con mi amigo Teddy el oso que
+                me acompaña a todos lados.</p>
+            <p></p>
+            <p>
+                <a href="#" id="volver">Volver al inicio de la página</a>
+            </p>
+        </div>
+    </div>
+    
+{% endblock content %}

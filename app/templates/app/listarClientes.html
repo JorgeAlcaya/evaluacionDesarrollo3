@@ -1,0 +1,84 @@
+{% extends 'app/baseAgregar.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<link href="{% static 'css/form.css' %}" rel="stylesheet">
+
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/icomoon/style.css' %}" rel="stylesheet">
+->
+<link href="{% static 'css/menu.css' %}" rel="stylesheet">
+<h3 class="user">Bienvenido </h3>
+<h3 class="user">{{user.username}}</h3>
+<h1 class="f">Listar Clientes</h1>
+<body  > 
+
+
+        <!-- <form action="/listarClientes" method="POST">
+            <div class="flot">
+                <div>
+                       <h1>Buscar por Apellido Paterno:</h1> 
+                </div>
+                   
+                    <input  type="text" name="apellido_paterno" value="{{apellido_paterno}}" style="width:100px" / >
+                    <input   type="submit" value="Buscar">
+            </div >
+
+            <div class="flot">
+                    <div>
+                            <h1>Buscar por Comuna:</h1> 
+                     </div>
+                    
+                    <input  type="text" name="comuna" value="{{comuna}}" style="width:100px" / >
+                    <input  type="submit" value="Buscar">
+            </div> 
+           
+           
+            
+            {% csrf_token %}
+            <input class="flot" action="/listarClientes" type="submit" value="Mostrar Todos">
+        </form>
+        -->
+
+    
+
+    
+
+
+
+
+
+       
+       
+   
+    {% for c in cliente %}
+            
+                <form  role="form" enctype="multipart/form-data" action="" method="POST" id="upload-image-form">
+                    <div class="btit" id="tcen" >
+
+
+                           
+                        
+                        <div > RUN </div><div  class="czise">{{c.rut}}</div>          
+                        <div > NOMBRE </div><div  class="czise">{{c.nombre}}</div>
+                        <div > APELLIDO PATERNO </div><div  class="czise"> {{c.apellido_paterno}}</div>
+                        <div > APELLIDO MATERNO </div><div  class="czise">{{c.apellido_materno}}</div>
+                        <div > TELÉFONO </div><div  class="czise"> {{c.telefono}}</div> 
+                        <div > DOMICILIO </div><div  class="czise"> {{c.domicilio}}</div>
+                        <div > REGIÓN </div><div  class="czise"> {{c.region}}</div>
+                        <div > COMUNA </div><div  class="czise"> {{c.comuna}}</div>
+                        <div > FECHA NACIMIENTO </div><div  class="czise"> {{c.fecha_nacimiento}}</div>
+                        <div > PRODUCTO </div><div  class="czise">{{c.producto}}</div>
+
+                        
+                        
+                    </div>
+                    
+                </form>
+
+
+                
+            {% endfor%}
+        
+</body>
+{% endblock content %}

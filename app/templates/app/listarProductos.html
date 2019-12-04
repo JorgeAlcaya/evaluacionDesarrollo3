@@ -1,0 +1,72 @@
+{% extends 'app/baseAgregar.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<link href="{% static 'css/form.css' %}" rel="stylesheet">
+
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/icomoon/style.css' %}" rel="stylesheet">
+
+<link href="{% static 'css/menu.css' %}" rel="stylesheet">
+
+<h3 class="user">Bienvenido </h3>
+<h3 class="user">{{user.username}}</h3>
+<h1 class="f">Listar Productos</h1>
+<body  > 
+
+    <div>
+        <form class="flot"  action="/listarProductos" method="POST">
+            
+            <div>
+                    <div >
+                        <div>
+                                <h1>Buscar por Precio:</h1> 
+                        </div>
+                            
+                            <input   type="number" name="precio" value="{{precio}}" style="width:100px" / >
+                            <input   type="submit" value="Buscar">
+                    </div >
+        
+                    <div >
+                            <div>
+                                    <h1>Buscar por Clasificación:</h1> 
+                                </div>
+                            
+                            <input   type="text" name="clasificacion" value="{{clasificacion}}" style="width:100px" / >
+                            <input  type="submit" value="Buscar">
+                    </div>
+
+            </div>
+            <br>
+            <br>
+            
+           
+           
+            
+            {% csrf_token %}
+            <input  action="/listarProductos" type="submit" value="Mostrar Todos">
+        </form>
+    </div>
+       
+
+   
+
+
+
+
+       
+       
+   
+            {% for c in producto %}
+                <form  role="form" enctype="multipart/form-data" action="" method="POST" id="upload-image-form">
+                    <div class="btit" id="tcen" >
+                        <div > NOMBRE </div><div  class="czise">{{c.nombre}}</div>
+                        <div > DESCRIPCION </div><div  class="czise">{{c.descripcion}}</div>          
+                        <div > CLASIFICACIÓN </div><div  class="czise">{{c.clasificacion}}</div>
+                        <div > PRECIO </div><div  class="czise">$ {{c.precio}}</div>
+                    </div>
+                </form>
+           {% endfor%}
+        
+</body>
+{% endblock content %}

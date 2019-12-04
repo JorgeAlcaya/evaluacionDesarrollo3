@@ -1,0 +1,56 @@
+.user{
+    color: red;
+}
+
+
+
+.f{
+    text-align: center;
+    width: 100%;
+    margin-top: 3%;
+    font-size: 40px;
+    float: left;
+    
+}
+
+.flot{
+    float: left;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5%;
+    color: black;
+    
+}
+
+
+.g{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-inline-end:70%;
+}
+
+.czise{
+    color:rgba(11, 15, 228, 0.856) ;
+    background-color: whitesmoke;
+}
+
+.btit{
+    color: black;
+    font-style: oblique;
+    background-color: whitesmoke;
+    float: left;
+    width: 15%;
+    margin: 2%;
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border: 4px double #000000;
+}
+
+#tcen{
+    text-align: center;
+}
+
+.rb{
+    color: red;
+}

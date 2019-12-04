@@ -1,0 +1,143 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mis Perris - Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <!-- Estilos -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+        <!-- Scripts -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+        <script src="{% static 'js/jquery.validate.min.js' %}"></script>             
+        <script src="{% static 'js/cargarData.js' %}"></script>
+        <script defer src="{% static 'js/reglas.js' %}"></script>        
+    </head>
+
+    <body class="content">
+
+        <!-- Cabezera -->
+         <nav id="navbar">
+            <div id="navbar-logo">            
+                <img src="{% static 'img/img/logo.png' %}" alt="logo">
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="nav-item"><a href="{% url 'index_MisPerris' %}">inicio</a></li>
+                    <li class="nav-item"><a href="#">servicios</a></li>
+                    <li class="nav-item"><a href="#">quienes somos</a></li>
+                    <li class="nav-item"><a href="#">contáctanos</a></li>
+                    <li class="nav-item"><a href="{% url 'carrera_crear' %}">registrarse</a></li>
+                </ul>
+            </div>                                 
+        </nav>
+
+        <!-- Infrmacion de contacto -->
+        <div id="contact">
+            <div id="p1">+ 56 9 98765431</div>
+            <div id="p2">Rescate y adopción de perros callejeros</div>
+            <div id="p3">
+                <ul>
+                    <li><div class="social"><img height="16" src="{% static 'img/icons/facebook-f-brands.svg' %}" alt="facebook"></div></li>
+                    <li><div class="social"><img height="16" src="{% static 'img/icons/google-plus-g-brands.svg' %}" alt="google"></div></li>
+                    <li><div class="social"><img height="16" src="{% static 'img/icons/instagram-brands.svg' %}" alt="instagram"></div></li>
+                    <li><div class="social"><img height="16" src="{% static 'img/icons/envelope-solid.svg' %}" alt="email"></div></li>                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div id="registro" class="container">
+
+            <h1 class="display">Registro</h1><br>
+
+            <form action="envio.html" method="POST" id="formulario" >
+
+                <div class="form-group">
+                    <label>Correo Electronico</label><br>
+                    <input type="email" name="txtCorreoElectronico" value="" required="" class="form-control"
+                           placeholder="Ingrese Email"/>
+                </div>
+
+                <div class="form-group">                    
+                    <label>RUN</label><br>
+                    <input type="text" name="txtRun" id="id_run" required oninput="" value="" class="form-control"
+                           placeholder="Ingrese RUN"/>
+                    <small id="emailHelp" class="text-muted">Ejemplo: 19243465-3</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre Completo</label><br>
+                    <input type="text" name="txtNombreCompleto" value="" required="" class="form-control"
+                           placeholder="Ingrese Nombre" onkeypress="return validarLetras(event)"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha Nacimiento</label><br>
+                    <input type="date" name="txtFechaNacimiento" value="" required="" id="datepicker" class="form-control"
+                           max="2000-12-31" />
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefono de Contacto</label><br> 
+                    <input type="number" name="txtTelefono" value="" required="" class="form-control"
+                           placeholder="Ingrese N° Telefono"
+                           min="111111111"/>
+                </div>
+                
+                <div class="form-group">
+                    <label>Región</label><br>
+                    <select class="custom-select" name="cmbRegiones" id="id_cmbRegiones" >                         
+                        <option value="arica">Región de Arica y Parinacota</option>
+                        <option value="tarapaca">Región de Tarapaca</option>
+                        <option value="antofagasta">Región de Antofagasta</option>
+                        <option value="atacama">Región de Atacama</option>
+                        <option value="coquimbo">Región de Coquimbo</option>
+                        <option value="valparaiso">Región de Valparaiso</option>
+                        <option value="ohiggins">Región del Libertador General Bdo. O'Higgins</option>
+                        <option value="maule">Región del Maule</option>
+                        <option value="biobio">Región de Biobio</option>
+                        <option value="araucania">Región de La Araucania</option>
+                        <option value="rios">Región de Los Rios</option>
+                        <option value="lagos">Región de Los Lagos</option>
+                        <option value="aisen">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
+                        <option value="magallanes">Región de Magallanes y de la Antártica Chilena</option>
+                        <option value="metropolitana">Región Metropolitana de Santiago</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Comuna</label><br>
+                    <select class="custom-select" name="cmbComunas" id="id_cmbComunas">
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Tipo de Vivienda</label><br>
+                    <select class="custom-select" name="cmbTipoVivienda" id="id_cmbTipoVivienda">
+                        <option>Casa con Patio Grande</option>
+                        <option>Casa con Patio Pequeño</option>
+                        <option>Casa sin Patio</option>
+                        <option>Departamento</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input class="btn" type="submit" value="Enviar" name="btnEnviar" id="enviar"/>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Pie de página -->
+        <div id="footer">
+            <p>Desarollo Web y Mobile - Ariel Chácon, Nicolás Leporati</p>
+        </div>
+
+    </body>
+</html>

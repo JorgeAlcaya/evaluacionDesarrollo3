@@ -1,0 +1,21 @@
+{% extends 'app/baseAgregar.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<link  href="{% static 'css/form.css' %}" rel="stylesheet">
+
+<link  href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link  href="{% static 'css/icomoon/style.css' %}" rel="stylesheet">
+
+<link  href="{% static 'css/menu.css' %}" rel="stylesheet">
+
+
+<body>
+    <h1 class="f">Editar Cliente</h1>
+   <form class="g" method="POST">
+        {{ form }}
+        {% csrf_token %}
+        <button  type="submit" >Editar</button><button><a href="http://localhost:8000/listarClientesFull">Volver</a></button>
+   </form>
+</body>
+{% endblock content %}

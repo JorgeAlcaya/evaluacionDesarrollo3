@@ -1,0 +1,47 @@
+.container {
+    border-radius: 10px;
+    background-image: url(../img/bordesf.jpg);
+    background-attachment: fixed;
+    box-shadow: 0 0 20px rgba(131, 2, 88, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(37, 190, 236);
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 30px;
+    width: 60%;
+    height: auto;
+}
+
+.boton {
+    background: #da460b;
+    border-radius: 10px;
+    color: rgb(8, 1, 8);
+    padding: 10px;
+}
+
+.campo {
+    color: rgb(0, 0, 0);
+    background-image: url(/img/bordesf.jpg);
+    background-attachment: fixed;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(131, 2, 88, 0.5);
+    border-color: rgba(131, 2, 88, 0.5);
+    width: 100%;
+    height: auto;
+}
+
+body {
+     background-image: url(/img/bor.jpg); 
+    /* background-attachment: fixed; */
+}
+
+
+
+
+@media (max-whidth: 480px) {
+    .container{
+      width: 100%;
+    }
+  }
+  
+

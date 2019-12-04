@@ -1,0 +1,153 @@
+/* body {
+  background-image: url( "{% static 'img/fondo.png' %}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+} */
+
+
+.tituloTest {
+  width: 100%;
+}
+
+.h1titulo {
+  text-align: center;
+  margin-top: 10%;
+}
+.contenedorTest1 {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  float: left;
+}
+
+.pTesti1 {
+  width: 85%;
+  background: transparent;
+  float: left;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 3%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imgTesti1 {
+  width: 15%;
+  height: 15%;
+  float: left;
+  border-radius: 150px;
+}
+
+.contenedorTest2 {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 1%;
+  float: left;
+}
+
+.pTesti2 {
+  width: 85%;
+  background: transparent;
+  float: left;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 3%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imgTesti2 {
+  width: 15%;
+  height: 15%;
+  float: left;
+  border-radius: 150px;
+}
+
+.contenedorTest3 {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 1%;
+  float: left;
+}
+
+.pTesti3 {
+  width: 85%;
+  background: transparent;
+  float: left;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 3%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imgTesti3 {
+  width: 15%;
+  height: 15%;
+  float: left;
+  border-radius: 150px;
+}
+
+.contenedorTest4 {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 1%;
+  float: left;
+}
+
+.pTesti4 {
+  width: 85%;
+  background: transparent;
+  float: left;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 3%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imgTesti4 {
+  width: 15%;
+  height: 15%;
+  float: left;
+  border-radius: 150px;
+}
+
+
+#mapa {
+  padding-bottom: 10%;
+  margin-left: 30%;
+  width: 30%;
+  height: 100%;
+  padding-top: 3%;
+}
+
+
+
+.img99{
+	float:left;
+	
+	background-image:url(/img/mapa.png);
+	background-size:150% 120%;
+	background-position:center;
+}
+
+#volver{
+  color: white;
+}
+
+li{
+  padding: 0;
+
+}
+
+.video1,.video2{
+  width: 100%;
+  border: 0px;
+}
+
+
+
+

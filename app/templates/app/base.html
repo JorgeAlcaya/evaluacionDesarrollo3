@@ -1,0 +1,116 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>{% block title %} Gamers {% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <link  href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+
+</head>
+
+<style>
+    body {
+        background-image: url("{% static 'img/fondo.png' %}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        color:cyan;
+        
+    }
+</style>
+
+<body>
+    <div class="content">
+        <header id="capa2">
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+            </div>
+
+            <nav>
+                <ul>
+
+                    <li><a href="http://localhost:8000/"><span class="icon-home"></span>Inicio</a></li>
+                    <li><a href="http://localhost:8000/quienes"><span class="icon-rocket"></span>Nosotros</a></li>
+
+
+                    <li><a href="https://twitter.com"><span class="icon-twitter-square"></span>Twitter</a></li>
+                    <li><a href="https://facebook.com"><span class="icon-facebook-square"></span>Facebook</a></li>
+                    <li><a href="https://web.whatsapp.com/"><span class="icon-whatsapp"></span>Whatsapp</a></li>
+                    <li><a href="https://instagram.com"><span class="icon-instagram"></span>Instagram</a></li>
+                    <li><a href="https://gmail.com"><span class="icon-envelop"></span>Correo</a></li>
+                    <li><a href="http://localhost:8000/api"><span class="icon-file-text"></span>Api Rest
+                        Cliente</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="http://localhost:8000/logout/"><span class="icon-clipboard"></span>Cerrar Sesión</a>
+                    </li>
+                    <li><a href="http://localhost:8000/listarProductos"><span class="icon-file-text"></span>Listar
+                            Productos</a></li>
+
+                    <li><a href="http://localhost:8000/listarClientes"><span class="icon-file-text"></span>Listar
+                            Clientes</a></li>
+
+                    <li><a href="http://localhost:8000/listarProductosFull"><span class="icon-file-text"></span>Editar
+                            Producto</a></li>
+                    <li><a href="http://localhost:8000/listarClientesFull"><span class="icon-file-text"></span>Editar
+                            Cliente</a></li>
+
+                    <li><a href="http://localhost:8000/ingresarProducto"><span class="icon-file-text"></span>Agregar
+                            Producto</a></li>
+                    <li><a href="http://localhost:8000/ingresarCliente"><span class="icon-file-text"></span>Agregar
+                            Cliente</a></li>
+
+                    
+
+                    {% else %}
+                    <li><a href="http://localhost:8000/inicio"><span class="icon-clipboard"></span>Iniciar Sesión</a>
+                    </li>
+
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Carrusel -->
+
+
+        {% block content %}
+        {% endblock %}
+
+        {% block footer %}
+
+        {% endblock %}
+    </div>
+
+    <!-- Scripts -->
+
+    <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
+    <script src="{% static 'js/jquery-latest.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-latest.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% block extrajs %}
+    <!-- Pie de página -->
+
+
+</body>
+
+{% endblock %}
+<div id="footer">
+    <h6>Creado por JA JD NB</h6>
+</div>
+
+</html>

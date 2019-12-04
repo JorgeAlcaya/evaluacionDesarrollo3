@@ -1,0 +1,49 @@
+#img1 {
+    width: 50%;
+    height:auto;
+    /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  
+    text-align:center;
+    margin-top: 100px;
+    vertical-align: middle;
+  }
+
+  #img2 {
+    width: 50%;
+    height: auto;
+    /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+    text-align:center;
+    
+    margin-top: 100px;
+    vertical-align: middle;
+    
+    
+  }
+
+  #img3 {
+    width: 50%;
+    height: auto;
+    /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+    /* position: relative; */
+    text-align:center;
+    
+    margin-top: 100px;
+    vertical-align: middle;
+  
+  }
+    
+  
+  
+  /* .flechas{
+      width: 60%;
+     
+  }  */
+ 
+ 
+ 
